@@ -1,5 +1,5 @@
 name: whatsapp_ui
-description: "A new Flutter project."
+description: "Responsive recreation of the whatsapp UI"
 publish_to: 'none'
 version: 0.1.0+1
 
@@ -17,3 +17,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/backgroundImage.png

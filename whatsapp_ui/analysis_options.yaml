@@ -1,1 +1,16 @@
 include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # Enable specific rules
+    prefer_const_constructors: true
+    avoid_print: true
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+
+  errors:
+    # Treat certain warnings as errors
+    missing_required_param: error

@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+import 'package:whatsapp_ui/colors.dart';
+
+class WebMenuBar extends StatelessWidget {
+  const WebMenuBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
+    return Container(
+      height: screenSize.height * 0.077,
+      width: screenSize.width * 0.25,
+      padding: const EdgeInsets.all(10),
+      decoration: const BoxDecoration(
+        border: Border(right: BorderSide(color: dividerColor)),
+        color: webAppBarColor,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const CircleAvatar(
+            radius: 20,
+            backgroundImage: NetworkImage(
+              'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+            ),
+          ),
+          _buildButtonsRow(),
+        ],
+      ),
+    );
+  }
+
+  Row _buildButtonsRow() {
+    return Row(
+      children: [
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.comment, color: Colors.grey),
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.more_vert, color: Colors.grey),
+        ),
+      ],
+    );
+  }
+}
